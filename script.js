@@ -3,6 +3,8 @@ let logo = document.querySelector('header .logo');
 let overlay = document.querySelector('.overlay');
 let soctialIcons = document.querySelector(' .list-nav .social-icons');
 let closeBtn = document.querySelector('header .menu img');
+let body = document.querySelector("body")
+
 document.querySelector(".menu").addEventListener("click", () => {
   logo.classList.toggle("invert");
   nav.classList.toggle("active");
@@ -10,10 +12,13 @@ document.querySelector(".menu").addEventListener("click", () => {
     overlay.style.display = "block";
     soctialIcons.style.display = "block";
     closeBtn.setAttribute("src", "./images/icon-close.svg");
+    body.style.overflowY = "hidden";
+    
   } else {
     overlay.style.display = "none";
     soctialIcons.style.display = "none";
     closeBtn.setAttribute("src", "./images/icon-hamburger.svg");
+    body.style.overflowY = "scroll";
   }
 
 })

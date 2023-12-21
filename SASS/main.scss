@@ -43,9 +43,10 @@ header {
 
       .links {
 
-              display: flex;
-                align-items: center;
-                justify-content: space-between;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
         li {
           position: relative;
 
@@ -95,12 +96,16 @@ header {
         flex-direction: column;
         position: absolute;
         top: $navHeight;
+        left: 50%;
+        transform: translateX(-50%);
         width: calc(100% - 20px);
-        height: calc(100vh - 300px);
+        height: calc(100vh - $navHeight - 50px);
         display: none;
 
         .links {
           width: 100%;
+          flex-direction: column;
+
           li {
             padding: 20px;
             width: calc(100% - 30px);
