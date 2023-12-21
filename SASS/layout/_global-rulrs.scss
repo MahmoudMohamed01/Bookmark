@@ -1,0 +1,264 @@
+@use "../variables/variables" as *;
+
+/* Start Global Rules*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff;
+  font-size: $fs-body;
+  text-transform: capitalize;
+  transition: 0.3s;
+  overflow-x: hidden;
+}
+
+html {
+  line-height: 1.1;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none
+}
+
+.container {
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+
+@media (min-width: 444px) {
+  .container {
+    width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+
+/* medium */
+@media (min-width:992px) {
+  .container {
+    width: 900px;
+  }
+}
+
+/* large */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  // display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $Dark-Blue;
+  opacity: 0.9;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.bg {
+  $postoin: -100%;
+  position: absolute;
+  background-color: $Soft-Blue;
+  z-index: -1;
+  width: 170%;
+
+  &.rt {
+    height: 70%;
+    border-radius: 200px 0 0 200px;
+    right: $postoin;
+    bottom: 0;
+  }
+
+  &.lt {
+    height: 100%;
+    border-radius: 0 200px 200px 0;
+    left: $postoin;
+    bottom: -25%;
+
+  }
+}
+
+@media (max-width:442px) {
+  .bg {
+    &.rt {
+      width: 183%;
+      height: 73%;
+    }
+
+    &.lt {
+      bottom: -15%;
+      width: 190%;
+
+    }
+  }
+}
+
+.main-heading {
+  text-align: center;
+
+  > {
+    h2 {
+      color: $Dark-Blue;
+      font-size: 35px;
+      font-weight: $fw-500;
+    }
+
+    p {
+      width: 550px;
+      color: $Grayish-Blue;
+      margin: 0 auto 50px;
+      max-width: 100%;
+      line-height: 2;
+    }
+  }
+
+}
+
+
+section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+  section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &.shadow {
+    box-shadow: $boxShadow;
+  }
+}
+
+.head-btnColor,
+.foot-btnColor {
+  background-color: $Soft-Red;
+  color: white;
+  border: 2px solid $Soft-Red;
+
+  &:hover {
+    background-color: white;
+    color: $Soft-Red;
+  }
+}
+
+.primary-btn {
+  background-color: $Soft-Blue;
+  color: white;
+  border: 2px solid $Soft-Blue;
+  box-shadow: $boxShadow;
+
+  &:hover {
+    background-color: white;
+    color: $Soft-Blue;
+    border: 2px solid $Soft-Blue;
+  }
+}
+
+.secandry-btn {
+  background-color: hsl(60deg 5.88% 96.67%);
+  color: $Dark-Blue;
+  box-shadow: 0 8px 16px 0 rgb(231 232 243);
+  border: 2px solid hsl(60deg 5.88% 96.67%);
+
+  &:hover {
+    background-color: white;
+    border: $Dark-Blue;
+    border: 2px solid $Dark-Blue;
+  }
+
+}
+
+.main-text {
+
+  h2,
+  h3 {
+    font-weight: $fw-500;
+
+  }
+
+  p {
+    line-height: 1.5;
+    color: $Grayish-Blue;
+    text-transform: none;
+    margin-bottom: 35px;
+  }
+
+  button {
+    padding: 15px 20px;
+    text-transform: capitalize;
+    font-weight: $fw-500;
+    margin-right: 20px;
+    font-size: $fs-14;
+  }
+}
+
+@media (max-width:992px) {
+  .main-text {
+    h2 {
+      font-size: 30px;
+
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.h-color {
+  color: $Dark-Blue;
+}
+
+.p-color {
+  color: $Grayish-Blue;
+}
+
+$col: 12;
+
+@for $i from 1 through $col {
+  .col-#{$i} {
+    width: percentage($i / $col);
+  }
+}
+
+/* End Global Rules*/

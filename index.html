@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize  -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Font awesome file-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <title> Frontend Mentor | Bookmark Landing Page</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><img src="./images/logo-bookmark.svg" alt="BOOKMARK"></div>
+        <div class="menu">
+          <img src="/images/icon-hamburger.svg" alt="">
+        </div>
+        <ul class="list-nav">
+          <li><a href="#features">features</a></li>
+          <li><a href="#pricing">pricing</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li><button class="btn head-btnColor shadow">login</button></li>
+          <div style="display: none;" class="social-icons">
+            <img src="./images/icon-facebook.svg">
+            <img src="./images/icon-twitter.svg">
+          </div>
+        </ul>
+      </div>
+    </header>
+    <section class="landing">
+      <div class="container">
+        <div class="main-text">
+          <h2 class="h-color">A Simple Bookmark Manager</h2>
+          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+            load instantly. Try it for free.</p>
+          <button class="btn primary-btn">Get it on Chrome</button>
+          <button class="btn secandry-btn">Get it on Firefox</button>
+        </div>
+        <div class="image">
+          <img src="/images/illustration-hero.svg" alt="">
+          <div class="bg rt"></div>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Features</h2>
+          <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync
+            between your devices so you can access them on the go.</p>
+        </div>
+        <div class="features-content">
+          <div class="category-features">
+            <div class="feature focused" id="1">Simple Bookmarking </div>
+            <div class="feature" id="2"> Speedy Searching</div>
+            <div class="feature" id="3">Easy Sharing</div>
+          </div>
+          <div class="features-detais">
+            <div class="feature-displayed">
+              <div class="image">
+                <img src="" alt="">
+                <div class="bg lt"></div>
+              </div>
+              <div class="main-text">
+                <h2></h2>
+                <p></p>
+                <button class="btn primary-btn"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="extensions">
+      <div class="container">
+
+        <div class="main-heading">
+          <h2>Download the extension</h2>
+          <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d
+            like us to prioritize.</p>
+        </div>
+        <div class="dl-links">
+          <div class="box">
+            <div class="main-text">
+              <img src="./images/logo-chrome.svg">
+              <h3>add to Chrome</h3>
+              <p>Minimum verison 62</p>
+            </div>
+            <img class="dots" src="./images/bg-dots.svg" alt="">
+            <button class="btn primary-btn"> Add & Install Extension</button>
+          </div>
+          <div class="box ">
+            <div class="main-text">
+              <img src="./images/logo-firefox.svg">
+              <h3>add to Firefox</h3>
+              <p>Minimum verison 55</p>
+            </div>
+            <img class="dots" src="./images/bg-dots.svg" alt="">
+            <button class="btn primary-btn"> Add & Install Extension</button>
+          </div>
+          <div class="box">
+            <div class="main-text">
+              <img src="./images/logo-opera.svg">
+              <h3>add to Opera</h3>
+              <p>Minimum verison 46</p>
+            </div>
+            <img class="dots" src="./images/bg-dots.svg" alt="">
+            <button class="btn primary-btn"> Add & Install Extension</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Frequently Asked Questions</h2>
+          <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email
+            us.</p>
+        </div>
+        <div class="content">
+          <div class="question" id="1">
+            <p class="head-q">What is Bookmark?</p>
+            <i class="fa-solid fa-angle-down"></i>
+            <p class="answer" id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
+              ultricies fringilla. Phasellus
+              blandit ipsum quis quam ornare mattis</p>
+          </div>
+          <div class="question" id="2">
+            <p class="head-q">How can i request a new browser?</p>
+            <i class="fa-solid fa-angle-down"></i>
+            <p class="answer" id="2">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+              ligula. Suspendisse imperdiet.
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+              imperdie tVivamus
+              luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+          <div class="question" id="3">
+            <p class="head-q">is there a mobile app?</p>
+            <i class="fa-solid fa-angle-down"></i>
+            <p class="answer" id="3">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor,
+              ut condimentum urna vulputate eget.
+              Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies
+              bibendum.</p>
+
+          </div>
+          <div class="question" id="4">
+            <p class="head-q">What about other chromium browsers?</p>
+            <i class="fa-solid fa-angle-down"></i>
+            <p class="answer" id="4">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
+              dui. Aliquam vitae neque eget nisl
+              gravida pellentesque non ut velit.</p>
+          </div>
+          <button class="btn primary-btn">More info</button>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+
+        <div class="content">
+          <div class="text">
+            <p>35,000+ already joined</p>
+            <h2>Stay up-to-date with what we’re doing</h2>
+          </div>
+          <form action="">
+            <div class="input-box">
+              <input  type="text" placeholder="Enter your email address">
+              <span class=""></span>
+            </div>
+            <button class="btn foot-btnColor"> Contact us</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <ul class="list-nav">
+          <li class="logo"><img src=".//images/logo-bookmark-light.svg" alt=""></li>
+          <li><a href="#features">features</a></li>
+          <li><a href="#pricing">pricing</a></li>
+          <li><a href="#contact">contact</a></li>
+
+        </ul>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+        </div>
+
+      </div>
+    </footer>
+    <div style="display: none;" class="overlay"></div>
+  </body>
+  <script src="./script.js"></script>
+
+</html>
