@@ -15,7 +15,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     .logo {
       display: flex;
@@ -38,31 +38,40 @@ header {
 
       &.active {
         display: flex;
+
       }
-    }
 
-    li {
-      position: relative;
+      .links {
 
-      a {
-        color: $Dark-Blue;
-        text-transform: uppercase;
-        padding: 25px;
-        font-weight: $fw-500 ;
-        font-size: $fs-12;
-        letter-spacing: 1.7px;
+              display: flex;
+                align-items: center;
+                justify-content: space-between;
+        li {
+          position: relative;
 
-        &:hover {
-          color: $Soft-Red;
+          a {
+            color: $Dark-Blue;
+            text-transform: uppercase;
+            padding: 25px;
+            font-weight: $fw-500 ;
+            font-size: $fs-12;
+            letter-spacing: 1.7px;
+
+            &:hover {
+              color: $Soft-Red;
+            }
+          }
+
+        }
+
+        button {
+          text-transform: uppercase;
+          letter-spacing: 1.7px;
+          font-size: $fs-12;
+          margin-left: 10px;
         }
       }
 
-      button {
-        text-transform: uppercase;
-        letter-spacing: 1.7px;
-        font-size: $fs-12;
-        margin-left: 10px;
-      }
     }
 
   }
@@ -86,25 +95,27 @@ header {
         flex-direction: column;
         position: absolute;
         top: $navHeight;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
+        width: calc(100% - 20px);
+        height: calc(100vh - 300px);
         display: none;
 
-        li {
-          padding: 20px;
-          width: calc(100% - 30px);
-          text-align: center;
-          border-top: 1px solid $Grayish-Blue;
+        .links {
+          width: 100%;
+          li {
+            padding: 20px;
+            width: calc(100% - 30px);
+            text-align: center;
+            border-top: 1px solid $Grayish-Blue;
 
-          &:last-of-type {
-            padding-inline: 0;
-          }
+            &:last-of-type {
+              padding-inline: 0;
+            }
 
-          a {
-            color: white;
-            font-size: $fs-body;
-            font-weight: $fw-400;
+            a {
+              color: white;
+              font-size: $fs-body;
+              font-weight: $fw-400;
+            }
           }
 
           button {
@@ -120,8 +131,6 @@ header {
         }
 
         .social-icons {
-          position: absolute;
-          top: 75vh;
 
           img {
             padding-inline: 15px;
@@ -231,11 +240,25 @@ header {
           width: fit-content;
 
           img {
-            width: 400px;
+            width: 390px;
           }
         }
 
 
+      }
+    }
+  }
+}
+
+@media (max-width:390px) {
+  section.landing {
+    .container {
+
+      .image {
+
+        img {
+          width: 350px;
+        }
       }
     }
   }
@@ -555,7 +578,7 @@ section {
     .text {
       color: white;
       margin: auto;
-      max-width: 550px;
+      max-width: 500px;
 
       p {
         font-size: 14px;
@@ -574,7 +597,7 @@ section {
       justify-content: center;
       align-items: center;
       gap: 20px;
-      max-width: 600px;
+      max-width: 500px;
       margin: auto;
 
       .input-box {
@@ -585,7 +608,7 @@ section {
 
         input[type='text'] {
           padding: 15px 15px;
-          border-radius: 6px;
+          border-radius: 5px;
           width: 100%;
           border: none;
           position: relative;
@@ -617,6 +640,7 @@ section {
           text-align: left;
           top: -3px;
           font-size: 14px;
+
           &::before {
             content: url(../images/icon-error.svg);
             position: absolute;
@@ -653,16 +677,18 @@ button {
 
       form {
         flex-direction: column;
-      .input-box {
-      width: 100%;
-        input {
-          width: 100% !important;
+
+        .input-box {
+          width: 100%;
+
+          input {
+            width: 100% !important;
+          }
         }
-      }
 
         button {
           width: 100%;
-          margin:0;
+          margin: 0;
         }
 
       }

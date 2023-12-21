@@ -6,14 +6,14 @@ let closeBtn = document.querySelector('header .menu img');
 document.querySelector(".menu").addEventListener("click", () => {
   logo.classList.toggle("invert");
   nav.classList.toggle("active");
-  if(closeBtn.getAttribute("src") == "/images/icon-hamburger.svg") {
+  if(closeBtn.getAttribute("src") == "./images/icon-hamburger.svg") {
     overlay.style.display = "block";
     soctialIcons.style.display = "block";
     closeBtn.setAttribute("src", "./images/icon-close.svg");
   } else {
     overlay.style.display = "none";
     soctialIcons.style.display = "none";
-    closeBtn.setAttribute("src", "/images/icon-hamburger.svg");
+    closeBtn.setAttribute("src", "./images/icon-hamburger.svg");
   }
 
 })
